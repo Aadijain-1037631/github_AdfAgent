@@ -1,0 +1,46 @@
+{
+  "remediation_summary": {
+    "critical": 3,
+    "major": 2,
+    "minor": 2,
+    "no_change": 4
+  },
+  "artifact_remediations": [
+    {
+      "name": "Pipeline_LoadMember",
+      "type": "pipeline",
+      "path": "customcode/ADF_Final/pipelines/Pipeline_LoadMember.json",
+      "remediation": "Updated pipeline query and removed EthnicId references."
+    },
+    {
+      "name": "Pipeline_ProcessClaim",
+      "type": "pipeline",
+      "path": "customcode/ADF_Final/pipelines/Pipeline_ProcessClaim.json",
+      "remediation": "Adjusted query to incorporate the addition of Claim.PriorDays column."
+    },
+    {
+      "name": "Dataset_MemberEthnicity",
+      "type": "dataset",
+      "path": "customcode/ADF_Final/datasets/MemberEthnicity.json",
+      "remediation": "Modified dataset schema to exclude EthnicId column."
+    },
+    {
+      "name": "Dataset_ClaimData",
+      "type": "dataset",
+      "path": "customcode/ADF_Final/datasets/ClaimData.json",
+      "remediation": "Updated schema to align with added Claim.PriorDays column."
+    },
+    {
+      "name": "LinkedService_SQLServer",
+      "type": "linked_service",
+      "path": "customcode/ADF_Final/linkedservices/SQLServer.json",
+      "remediation": "No changes needed; connection functional."
+    },
+    {
+      "name": "LinkedService_QNXT",
+      "type": "linked_service",
+      "path": "customcode/ADF_Final/linkedservices/QNXT.json",
+      "remediation": "No changes required for configuration updates regarding QRule."
+    }
+  ]
+}
